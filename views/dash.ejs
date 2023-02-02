@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./img/semkart.png" alt="SEMKART">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Task URL -----
+    https://xd.adobe.com/view/f755e53e-2d9b-4c82-9a58-f07e7544708a-a206/screen/d15a4093-5294-4711-a5af-0e4d77b62c22/ -->
+
+<body>
+    <div class="nav">
+        <div class="navitems">
+            <div class="section1">
+
+                <!-- <span><i class="bi bi-list fs-1 menubtn"></i></span> -->
+                <span><a href="/" style="padding-left: 80px;"><img src="./semkart.png" alt=""></a></span>
+            </div>
+            <div class="section2">
+                <div class="menu-title active">
+                    <p>Reservation</p>
+                </div>
+               
+            </div>
+            <div class="section3 ">
+                <div class="nortification">
+                    </div>
+                    <h1><%= username %></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================= Left Menu =========================== -->
+    <div class="mainMenu">
+        <div class="leftmenu">
+            <div class="dropdown">
+                <div class="dropbtn"><i class="bi bi-list fs-1 menubtn"></i></div>
+                <div class="dropdown-content">
+                    <a href="#" class="fs-5">Dashboard</a>
+                    <p style="margin:0 0 0 20px;">
+                        <a href="/add.ejs" class="dashboard-title db-active">Ajouter </a>
+                        <a href="/Edit.ejs" class="dashboard-title db-active">Modifier </a>
+                        <a href="/delete.ejs" class="dashboard-title db-active">Supprimer </a>
+                        
+                    </p>
+                </div>
+            </div>
+
+           
+        </div>
+        <!-- =================================== Dashbord Body ============================= -->
+        <div class="dashbordbody">
+            
+            <div class="table">
+                
+                <div class="table">
+                    <div class="table-header">
+                        <div class="header__item"><a id="name" class="filter__link" >id</a></div>
+                        <div class="header__item"><a id="wins" class="filter__link filter__link--number" >name</a></div>
+                        <div class="header__item"><a id="draws" class="filter__link filter__link--number">email</a></div>
+                        <div class="header__item"><a id="losses" class="filter__link filter__link--number" >phone</a></div>
+                        <div class="header__item"><a id="total" class="filter__link filter__link--number" >number of people</a></div>
+                        <div class="header__item"><a id="total" class="filter__link filter__link--number" >date</a></div>
+                        <div class="header__item"><a id="total" class="filter__link filter__link--number" >special requests</a></div>
+       
+                    </div>
+                    <% for(var i=0; i <= result.length - 1; i++) { %>
+                    <div class="table-content">	
+                        <div class="table-row">		
+                            <div class="table-data"><%= result[i].id %></div>
+                            <div class="table-data"><%= result[i].firstName %></div>
+                            <div class="table-data"><%= result[i].EMAIL %></div>
+                            <div class="table-data"><%= result[i].PHONE_NUMBER %></div>
+                            <div class="table-data"><%= result[i].NUMBER_OF_PEOPLE %></div>
+                            <div class="table-data"><%= result[i].RESERVATION_DATE %></div>
+                            <div class="table-data"><%= result[i].SPECIAL_REQUESTS %></div>
+                        </div> 
+                </div>
+                <% } %>
+            </div>
+                    </div>
+
+                    
+<table id="menu-table">
+   
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

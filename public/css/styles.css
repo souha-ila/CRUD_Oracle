@@ -1,0 +1,391 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F9FAFC;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #8f0835bf; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.navitems {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    top: 0;
+    position: fixed;
+    box-shadow: 1px 5px ;
+    position: relative;
+}
+
+.section1 {
+    width: 33%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 20px;
+}
+
+.menubtn {
+    font-size: 35px;
+    color: #000;
+    /* background-color: #F9FAFC; */
+}
+
+
+.topnav {
+    width: 300px;
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+}
+
+.topnav #myLinks {
+    height: auto;
+    display: none;
+    z-index: 10;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.section2 {
+    width: 33%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.menu-title {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 2px solid #8f0835bf;
+}
+
+.menu-title:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    margin-top: 35px;
+    background-color: #8f0835bf;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu-title:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.section3 {
+    width: 33%;
+    height: auto;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nortification {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+
+
+
+
+/* ================================Left Menu ======================= */
+.mainMenu {
+    width: 100%;
+    height: 100vh;
+    top: 95px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    column-gap: 150px;
+}
+
+.leftmenu {
+    width: 60px;
+    height: 100vh;
+    background-color: #000;
+    top: 0px;
+    position: fixed;
+}
+
+.dropbtn {
+    background-color: white;
+    color: white;
+    padding: 0px 11px 0px 11px;
+    font-size: 16px;
+    border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    width: 250px;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    color: #fff;
+    background-color: rgb(21, 19, 19);
+    box-shadow:  rgb(21, 19, 19);
+    z-index: 1;
+    margin: 1px 0 0 50px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #fff;
+}
+
+.leftmenu-Items {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.menu-items-title {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(161, 158, 158);
+    border-radius: 5px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+/* ========================= dashbor-body ===================== */
+.dashbordbody {
+    width: 100%;
+    height: auto;
+    margin-left: 110px;
+    margin-top: -30px;
+}
+
+.dashbordbody-items {
+    width: 88%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.dashbordbody-title {
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #464646;
+}
+.dashbordbody-info {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.select-menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+input[type=date] {
+    width: 100%;
+    padding: 6px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #ada7a7;
+}
+
+.dbBtn {
+    width: 100px;
+    padding: 6px;
+    color: #fff;
+    background-color: #8f0835bf;
+    border: 1px solid #8f0835bf;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-title{
+    width: 170px;
+    height: auto;
+    padding: 4;
+    margin: 15px 0 10px 0;
+    border-radius: 10px;
+}
+.db-active{
+    background-color: rgb(82, 80, 80);
+}
+.dashboard-title:hover {
+    cursor: pointer;
+    background-color: rgb(82, 80, 80);
+
+}
+.sales-db{
+    width: 100%;height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.sales-db-graph{
+    width: 100%;height: auto;
+}
+.sales-db-table{
+    width: 100%;height: auto;
+}
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+   
+    border-width: 0;
+    font-size: 12px;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+
+
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+
+.container {
+	max-width: 1000px;
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+}
+
+.table {
+	width:85%;
+	padding-left: 6%;
+}
+
+.table-header {
+	display:flex;
+	
+	background:#000;
+	
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	
+	
+	
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+}
+
+.header__item {
+	text-transform:uppercase;
+}
+
+.filter__link {
+	color:white;
+	text-decoration: none;
+	position:relative;
+	display:inline-block;
+
+
+	
+}
+
+
+

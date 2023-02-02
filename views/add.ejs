@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add News</title>
+	<link rel="stylesheet" href="/add.css" type="text/css" />
+</head>
+<div class="testbox">
+	<form method="post" action="/add" >
+	  <div class="banner">
+		<h1>Ajouter Reservation</h1>
+	  </div>
+	  <p> Informations sur la Reservation</p>
+
+	  <div class="item">
+		<label for="title"> CUSTOMER_NAME<span>*</span></label>
+		<input id=" CUSTOMER_NAME" type="text" name="CUSTOMER_NAME" required/>
+	  </div>
+	  <div class="item">
+        <label> EMAIL<span>*</span></label>
+        <input  type="text" name="EMAIL" required>
+      </div>
+	  <div class="item">
+        <label> PHONE_NUMBER<span>*</span></label>
+        <input  type="text" name="PHONE_NUMBER" required>
+      </div>
+	  
+	 
+	  <div class="item"> 
+		<label>NUMBER_OF_PEOPLE <span>*</span></label>  
+		<input type="text" name="NUMBER_OF_PEOPLE" ><br>   
+		</div>
+		<div class="item"> 
+			<label>RESERVATION_DATE <span>*</span></label>  
+			<input type="text" name="RESERVATION_DATE" ><br>   
+			</div>
+			<div class="item"> 
+				<label>SPECIAL_REQUESTS <span>*</span></label>  
+				<input type="text" name="SPECIAL_REQUESTS" ><br>   
+				</div>
+		  
+	  <div class="btn-block">
+		<button type="submit" >ADD</button>
+	  </div>
+	  
+	</form>
+  </div>
+</html>
